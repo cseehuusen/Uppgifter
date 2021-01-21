@@ -1,0 +1,25 @@
+int frame = 0;
+float multiplier = 0.002;
+int numberOfPoints = 100;
+int pointPositionX;
+
+void setup()
+{
+  size(1920, 1080);
+  strokeWeight(5);
+  stroke(255, 200, 100);
+}
+
+void draw()
+{
+  background(0);
+
+for (int i = 0; i < numberOfPoints; ++i)
+ {
+ 	pointPositionX = (i + 1) * 19;
+	point(pointPositionX, 540 + sin(frame * 0.04 ) * 410);
+ }
+
+
+  frame++;
+} 
